@@ -8,9 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.lang.NonNull;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 @Slf4j
+@Component
 public class KafkaHandlerInterceptor implements HandlerInterceptor {
 
   public static final String KAFKA_TOPIC = "test";

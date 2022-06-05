@@ -22,7 +22,7 @@ public class KafkaWebMvcConfig implements WebMvcConfigurer {
   public void addInterceptors(@NonNull InterceptorRegistry registry) {
     if (kafkaConfig.isEnable()) {
       registry.addInterceptor(kafkaHandlerInterceptor)
-          .addPathPatterns("/**")
+          .addPathPatterns("/kafka/**")
           .excludePathPatterns("/static/**");
     }
   }
