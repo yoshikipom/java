@@ -15,5 +15,10 @@ logging.level:
 #      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 myapp:
-  kafka:
-    enable: true
+  client:
+    http:
+      baseUrl: http//localhost:9000
+      connectionTimeoutMillis: 3000
+      readTimeoutMillis: 3000
+    kafka:
+      enable: true
