@@ -4,6 +4,10 @@ plugins {
     id 'java'
 }
 
+springBoot {
+    mainClass = "com.yoshikipom.dev.cli.CliApplication"
+}
+
 group = 'com.yoshikipom.dev'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '18'
@@ -32,3 +36,4 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
