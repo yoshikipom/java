@@ -1,0 +1,3 @@
+myapp:
+  configTest:
+    key: overwritten_by_external

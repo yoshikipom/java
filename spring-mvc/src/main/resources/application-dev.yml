@@ -1,0 +1,3 @@
+myapp:
+  configTest:
+    env: dev

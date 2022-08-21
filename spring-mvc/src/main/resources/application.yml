@@ -2,6 +2,10 @@ logging.level:
   org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
 
 spring:
+  config:
+    import:
+      - "another.yml"
+      - "optional:file:./spring-mvc/dev/external-config.yml"
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
@@ -22,3 +26,10 @@ myapp:
       readTimeoutMillis: 3000
     kafka:
       enable: true
+
+  configTest:
+    key: value
+    env_test: ${ENV_TEST}
+    noenv: ${NO_ENV:default_value}
+    flag: true
+    env: no_env
