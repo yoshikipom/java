@@ -1,0 +1,9 @@
+myapp:
+  plugin:
+    pluginMap:
+      groupA:
+        - fooPlugin
+      groupB:
+        - barPlugin
+        - fooPlugin
+
