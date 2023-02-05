@@ -16,19 +16,19 @@ public class PluginExecutor {
 
   public void execute(String pluginGroupName) {
     // load config
-    List<String> pluginExecutorNames = pluginConfig.pluginMap()
+    List<String> pluginNames = pluginConfig.pluginMap()
         .getOrDefault(pluginGroupName, null);
 
     // if no plugin config, return
-    if (pluginExecutorNames == null) {
+    if (pluginNames == null) {
       return;
     }
 
     // execute plugins one by one
-    for (var pluginExecutorName : pluginExecutorNames) {
-      Plugin plugin = pluginMap.get(pluginExecutorName);
-      PluginInput pluginExecutorInput = new PluginInput(); // you can add any input to this class
-      PluginOutput pluginOutput = plugin.execute(pluginExecutorInput);
+    for (var pluginName : pluginNames) {
+      Plugin plugin = pluginMap.get(pluginName);
+      PluginInput pluginInput = new PluginInput(); // you can add any input to this class
+      PluginOutput pluginOutput = plugin.execute(pluginInput);
       // consume pluginOutput if necessary
     }
   }
